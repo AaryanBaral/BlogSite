@@ -1,0 +1,55 @@
+/* Main  */
+.main-div{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+}
+
+
+/*  All Blogs Css */
+.all-blog-container{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+/* BLog Card Css */
+/* .blog-card-container{
+} */
+
+/* Trending content */
+.trending-title{
+    font-weight: bold;
+    margin: 0;
+}
+.trending-body{
+    padding:0 0 0 1rem;
+}
+.update{
+    margin: 0;
+}
+.trending-img{
+    height: -webkit-fill-available;
+
+}
+.trending-container{
+    margin-bottom:1.2rem;
+}
+.trending-box {
+    max-height: 95vh;
+    overflow-y: auto;
+}
+
+
+/* Main Card */
+.main_card{
+    width:50rem;
+    margin-top:4rem;
+    border: none;
+}
+.card-img-top{
+    width:--webkit-fill-available;
+    height: auto;
+    border-radius:2px;
+}
