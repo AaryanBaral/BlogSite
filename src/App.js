@@ -1,14 +1,13 @@
 import './App.css';
-import AllBlogs from './component/AllBlogs';
-import Main from './component/Main';
+
 import Navbar from './component/Navbar';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
     <>
     <Navbar/>
-    <Main />
-    <AllBlogs/>
+    <HomePage/>
     </>
   );
 }

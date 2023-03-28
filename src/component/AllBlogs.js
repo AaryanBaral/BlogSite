@@ -6,7 +6,7 @@ export default function AllBlogs() {
   return (
     <>
     <div>
-    <h1 className='text-center'>All Blogs</h1>
+    <h1 className='text-center all-blog-title'>All Blogs</h1>
     <div className="all-blog-container row row-cols-1 row-cols-md-3 g-4">
         <BlogCard/>
         <BlogCard/>

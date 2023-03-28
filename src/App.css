@@ -2,25 +2,47 @@
 .main-div{
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 1rem;
+    padding:1rem;
+}
+
+/* Main Card */
+.main_card{
+    height: fit-content;
+    width:50rem;
+    margin-top:5.5rem;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 4rem;
+    box-shadow: -10px 10px 20px 8px rgba(0, 0, 0, 0.5);
+    background-image: inherit;
+}
+.card-img-top{
+    width:--webkit-fill-available;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 
 /*  All Blogs Css */
 .all-blog-container{
-    margin: 0;
     padding: 0;
+    margin:0 5% 0 5%;
 
 }
 
 
+
 /* BLog Card Css */
-/* .blog-card-container{
-} */
+.blog-card{
+    margin:2%;
+    border: none;
+}
+
 
 /* Trending content */
 .trending-title{
-    font-weight: bold;
+    font-weight:bold;
     margin: 0;
 }
 .trending-body{
@@ -31,25 +53,121 @@
 }
 .trending-img{
     height: -webkit-fill-available;
+    width: 9rem;
 
 }
 .trending-container{
-    margin-bottom:1.2rem;
+    margin-bottom:2rem;
 }
-.trending-box {
+/* .trending-box {
     max-height: 95vh;
     overflow-y: auto;
-}
-
-
-/* Main Card */
-.main_card{
-    width:50rem;
-    margin-top:4rem;
+} */
+.trending-card{
     border: none;
+    border-radius: 0px;
+    border-bottom: px solid gray;
+    width:30rem;
+    display:flex;
+    align-items:center;
+    padding-bottom:1rem;
 }
-.card-img-top{
-    width:--webkit-fill-available;
-    height: auto;
-    border-radius:2px;
+.trending-card h3{
+    padding: 10px;
+    border-bottom: 3px solid rgba(49, 125, 248, 0.924);
 }
+
+
+
+
+
+
+
+
+/* ------------- Meadia Queries ------------------ */
+
+@media (max-width:1200px) {
+
+    .trending-title{
+        font-size: 12px;
+    }
+    .update small{
+        font-size: 13px;
+    }
+    
+}
+
+
+
+@media (max-width:900px) {
+    .update small{
+        font-size: 11px;
+    }
+    .trending-card h3{
+        border-bottom: none;
+    }
+
+    .trending-box{
+        display: block;
+    }
+    .trending-title{
+        font-size: 1.3rem;
+    }
+    .main-div{
+        display: block;
+    }
+    .main_card{
+        width: auto;
+        margin-bottom: 3.5rem;
+    }
+    .trending-container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .trending-container .col{
+        width: 40%;
+    }
+    .trending-container .col-md-8{
+        width: 60%;
+    }
+
+    .trending-card{
+        width: auto;
+    }
+    .trending-card h3{
+        font-size: 50px;
+        margin-bottom: 2rem;
+    }
+    .trending-img{
+        min-height: 9rem;
+        width: 20rem;
+    }
+    .main_card{
+        margin-top: 2rem;
+    }
+
+    
+}
+
+@media (max-width:500px){
+    .trending-title{
+        font-size: 0.9rem;
+    }
+    .update small{
+        font-size: 12px;
+    }
+    .trending-img{
+        min-height: 8rem;
+    }
+}
+@media (max-width:340px){
+    .trending-title{
+        font-size: 0.6rem;
+    }
+    .update small{
+        font-size: 8px;
+    }
+
+}
+
