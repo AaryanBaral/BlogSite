@@ -1,20 +1,19 @@
 import React from 'react'
-import image from '../image.png'
+
 import "../App.css"
 
 
-export default function TrendingContent() {
+export default function TrendingContent(props) {
   return (
     <>
     <div className="my-2">
       <div className="row g-0 trending-container">
         <div className="col">
-          <img src={image} className="img-fluid rounded trending-img" alt="..."/>
+          <img src={props.blog.ImageUrl} className="img-fluid rounded trending-img" alt="..."/>
         </div>
-        <div className="col-md-8">
+        <div className="col-md-8 trending-content">
           <div className="card-body trending-body">
-            <p className='trending-title'>This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-            <p className='update'><small className="text-body-secondary">Last updated 3 mins ago</small></p>
+            <p className='trending-title'>{props.blog.MetaTitle.slice(0,80)}</p>
           </div>
         </div>
       </div>

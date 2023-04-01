@@ -1,18 +1,17 @@
-import React from 'react'
-import image from '../image.png'
+import {React} from 'react'
 import "../App.css"
 
-export default function BlogCard() {
+export default function BlogCard(props) {
   return (
     <>
       <div className="col">
         <div className="card blog-card">
           <div className="img">
-            <img src={image} className="card-img-top rounded" alt="..."/>
+            <img src={props.blog.ImageUrl} loading="lazy" decoding="async" className="card-img-top rounded blog-card-img" alt="..."/>
           </div>
           <span className="blog-body">
-            <h5 className="blog-title">Card title</h5>
-            <p className="blog-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h5 className="blog-title">{props.blog.MetaTitle.length>100?props.blog.MetaTitle.slice(0,100):props.blog.MetaTitle}</h5>
+            <p className="blog-text">{props.blog.MetaDescription.length>155?props.blog.MetaDescription.slice(0,155):props.blog.MetaDescription}....see more</p>
           </span>
         </div>
       </div>

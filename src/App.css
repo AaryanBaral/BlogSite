@@ -1,24 +1,32 @@
-/* Main  */
+
+
+
+/*-------------------------------------------------- Main  ---------------------------------------*/
+
+
 .main-div{
     display: flex;
     justify-content: space-evenly;
     padding:1rem;
 }
 
-/* Main Card */
+
+
+/*---------------------------------------- Main Card ---------------------------------------*/
+
+
 .main_card{
     width:50rem;
     margin-top:5.5rem;
     border-radius: 10px;
     border: none;
     margin-bottom: 4rem;
-    box-shadow: -10px 10px 20px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: -10px 10px 20px 8px rgba(0, 0, 0, 0.3);
     background-image: inherit;
 }
 .main-card-content{
     padding: 0;
-    padding-left:30px;
-    padding-right: 20px;
+    padding:30px;
 }
 .card-title{
     margin-top:30px;
@@ -30,11 +38,18 @@
     font-size: 16px;
 }
 .card-img-top{
-    width:--webkit-fill-available;
     height: auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+.main_card .card-img-top{
+    min-height: 28rem;
+    max-height: 30rem;
+    object-fit: cover;
+    object-position: top;
+}
+
+
 
 
 /*  All Blogs Css */
@@ -46,7 +61,10 @@
 
 
 
-/* BLog Card Css */
+
+/*----------------------------------- BLog Card Css ----------------------------------*/
+
+
 .blog-card{
     margin:2%;
     border: none;
@@ -56,11 +74,16 @@
     overflow: hidden ;
     border-radius: 5px;
 
+
 }
 .blog-body{
     margin:20px;
 }
 .blog-card img{
+    min-height: 23rem;
+    max-height: 23rem;
+    object-fit: cover;
+    object-position:center;
     transition: transform .4s;
 }
 .blog-card:hover img{
@@ -71,22 +94,25 @@
 .blog-text{
     padding:0;
     margin: 0;
+    opacity: 0.7;
 }
-/* .card-body{
-    transition: all ease .4s;
+.meta-title{
+    margin-top: -13rem;
 }
-.blog-card:hover .card-body{
-    margin-top: -16rem;
+#blog-meta-title{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:13rem
 }
-.blog-card:hover .card-title{
-    opacity: 0;
-}
-.blog-card:hover .card-text{
-    color: black;
-} */
 
 
-/* Trending content */
+
+
+/*------------------------ Trending content ------------------------------*/
+
+
 .trending-title{
     font-weight:bold;
     margin: 0;
@@ -98,8 +124,9 @@
     margin: 0;
 }
 .trending-img{
-    height: -webkit-fill-available;
     width: 9rem;
+    height: 7rem;
+    object-fit: cover;
 
 }
 .trending-container{
@@ -119,6 +146,10 @@
     padding: 10px;
     border-bottom: 3px solid rgba(49, 125, 248, 0.924);
 }
+.trending-content{
+    display: flex;
+    align-items: center;
+}
 
 
 
@@ -126,27 +157,33 @@
 
 
 
+/* ---------------------------------------- Meadia Queries ----------------------------------------------- */
 
-/* ------------- Meadia Queries ------------------ */
+
+/*-------------------------------------------------- For screen below 1200px ---------------------------------------------------- */
 
 @media (max-width:1200px) {
-
-    .trending-title{
-        font-size: 12px;
+    
+    .main-card-title{
+        font-size: 1.6rem;
     }
-    .update small{
-        font-size: 13px;
+    .main-card-des{
+        font-size: 0.9rem;
+    }
+    .blog-card .img{
+        max-height: 16rem;
     }
     
 }
 
 
+/*-------------------------------------------------- For screen below 900px ---------------------------------------------------- */
 
 @media (max-width:900px) {
     .update small{
         font-size: 15px;
     }
-
+    
     .trending-box{
         display: block;
     }
@@ -171,7 +208,7 @@
     .trending-container .col-md-8{
         width: 60%;
     }
-
+    
     .trending-card{
         width: auto;
     }
@@ -180,17 +217,38 @@
         margin-bottom: 2rem;
     }
     .trending-img{
-        min-height: 9rem;
+        min-height: 13rem;
         width: 20rem;
     }
     .main_card{
         margin-top: 2rem;
     }
-
+    .all-blog-container{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 900px;
+    }
+    .all-blog-container .col{
+        width: 100%;
+        
+    }
+    .blog-card .img, .blog-card img{
+        min-height: 26rem;
+        max-height: 26rem;
+    }
+    
+    
+    
     
 }
 
+/*-------------------------------------------------- For screen below 500px ---------------------------------------------------- */
+
+
 @media (max-width:500px){
+    .main_card .card-img-top{
+        min-height: 18rem;
+    }
     .trending-title{
         font-size: 0.9rem;
     }
@@ -209,7 +267,23 @@
         margin: 0px;
         font-size: 12px;
     }
+    .blog-card .img, .blog-card img{
+        min-height: 22rem;
+        max-height: 22rem;
+    }
+    .blog-title{
+        font-size: 1rem;
+    }
+    .blog-text{
+        font-size: 0.8rem;
+    }
+    
 }
+
+
+/*-------------------------------------------------- For screen below 340px ---------------------------------------------------- */
+
+
 @media (max-width:340px){
     .trending-title{
         font-size: 0.6rem;
@@ -222,6 +296,16 @@
     }
     .trending-card h3{
         font-size: 2.5rem;
+    }
+    .blog-card .img, .blog-card img{
+        min-height: 16rem;
+        max-height: 16rem;
+    }
+    .blog-title{
+        font-size: 0.85rem;
+    }
+    .blog-text{
+        font-size: 0.6rem;
     }
 }
 
