@@ -6,7 +6,6 @@ import baseApi from '../utils/axiox';
 
 export default function Trending() {
   const [trending,setTrending] = useState([]);
-
   const GetTrendingBlogs = async()=>{
     let TrendingBlog = await baseApi.get("/blog")
     let data = await TrendingBlog.data;

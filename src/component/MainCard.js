@@ -1,20 +1,21 @@
 import React, { useState } from 'react'
 import "../App.css"
 import baseApi from '../utils/axiox';
+import Loading from './Loading';
 
 export default function MainCard() {
   const [blogData,setBlogData] = useState([]);
-const fetchAllBlogData = async ()=>{
+  const [IsLoading,setIsLoading] = useState(true);
+  const fetchAllBlogData = async ()=>{
   let res = await baseApi.get("/blog")
   if(res){
     setBlogData(res.data[3]);
   }
 }
-// React.useEffect(() => {
-//   fetchAllBlogData();
-// }, []);
-fetchAllBlogData();
-console.log(blogData)
+React.useEffect( () => {
+  fetchAllBlogData();
+}, []);
+// setIsLoading(false);
   return (
     <>
       <div className="card main_card">
