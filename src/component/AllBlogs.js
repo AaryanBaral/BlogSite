@@ -8,15 +8,15 @@ export default function AllBlogs() {
 
   const fetchAllBlogData = async ()=>{
     let res = await baseApi.get("/blog");
-    let data = await res.data;
+    let data = res.data;
     if(res){
-      setBlogData(data);
+      setBlogData(data.slice(1,data.length));
     }
   }
   React.useEffect(() => {
     fetchAllBlogData();
   }, []);
-  // fetchAllBlogData();
+
   
   return (
     <>

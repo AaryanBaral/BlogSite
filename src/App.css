@@ -106,6 +106,10 @@
     align-items: center;
     height:13rem
 }
+.Link{
+    color: black;
+    text-decoration: none;
+}
 
 
 
@@ -169,10 +173,12 @@
     height:10rem;
     border-radius: 50%;
     object-fit: cover;
+    margin-left:5rem;
 
 }
 .contributor-body{
-    margin:2rem;
+    margin-left: 3rem;
+    margin-right:5rem;
 }
 .swip-icon{
     min-width: 4rem;
@@ -184,6 +190,13 @@
     justify-content: center;
 }
 
+
+
+.swiper-container{
+    display: flex;
+    justify-content: center;
+    
+}
 
 
 /* ---------------------------------------- Meadia Queries ----------------------------------------------- */
